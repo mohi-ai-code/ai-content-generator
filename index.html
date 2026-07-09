@@ -1,18 +1,103 @@
 <!DOCTYPE html>
 <html lang="fa">
+<!DOCTYPE html>
+<html lang="fa">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AI Content Generator</title>
+
+<style>
+
+body{
+font-family:tahoma;
+direction:rtl;
+background:#f4f4f4;
+padding:30px;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px #ccc;
+}
+
+input{
+width:100%;
+padding:12px;
+font-size:18px;
+margin-top:15px;
+}
+
+button{
+margin-top:15px;
+padding:12px;
+width:100%;
+background:#0d6efd;
+color:white;
+font-size:18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+#result{
+margin-top:25px;
+background:#eee;
+padding:15px;
+border-radius:8px;
+line-height:2;
+}
+
+</style>
+
 </head>
 
 <body>
-<h1>سلام 👋</h1>
 
-<h2>اولین پروژه من در GitHub</h2>
+<div class="container">
 
-<p>
-این صفحه با کمک ChatGPT ساخته شده است.
-</p>
+<h1>🤖 تولیدکننده محتوا</h1>
+
+<input
+id="product"
+placeholder="نام محصول را وارد کنید">
+
+<button onclick="generate()">
+
+✨ تولید متن
+
+</button>
+
+<div id="result">
+
+اینجا متن نمایش داده می‌شود...
+
+</div>
+
+</div>
+
+<script>
+
+function generate(){
+
+let product=document.getElementById("product").value;
+
+document.getElementById("result").innerHTML=
+
+"اگر به دنبال یک "+
+product+
+" خاص و شیک هستی، همین الان سفارش بده و متفاوت باش.";
+
+}
+
+</script>
 
 </body>
+
 </html>
